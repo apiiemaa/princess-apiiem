@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nama Kamu | Website Pribadi</title>
+  <meta name="description" content="Website pribadi Nama Kamu bertema pink princess.">
+  <meta name="theme-color" content="#FFD6E6">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%91%91%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#konten">Lewati ke konten</a>
+
+  <!-- Mahkota kecil yang bisa dipakai ulang -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#F8D98A"/>
+        <stop offset="0.55" stop-color="#D9A441"/>
+        <stop offset="1" stop-color="#B9812C"/>
+      </linearGradient>
+      <linearGradient id="pinkgem" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#FF9CC8"/>
+        <stop offset="1" stop-color="#D6358A"/>
+      </linearGradient>
+      <symbol id="crown" viewBox="0 0 200 150">
+        <path d="M18 128 L8 48 L56 86 L100 14 L144 86 L192 48 L182 128 Z" fill="url(#gold)" stroke="#9A6A1F" stroke-width="3" stroke-linejoin="round"/>
+        <rect x="18" y="118" width="164" height="20" rx="8" fill="url(#gold)" stroke="#9A6A1F" stroke-width="3"/>
+        <circle cx="8" cy="46" r="8" fill="url(#pinkgem)" stroke="#9A6A1F" stroke-width="2"/>
+        <circle cx="100" cy="12" r="10" fill="url(#pinkgem)" stroke="#9A6A1F" stroke-width="2"/>
+        <circle cx="192" cy="46" r="8" fill="url(#pinkgem)" stroke="#9A6A1F" stroke-width="2"/>
+        <path d="M100 112 C86 100 80 92 88 84 C94 78 100 82 100 88 C100 82 106 78 112 84 C120 92 114 100 100 112 Z" fill="url(#pinkgem)" stroke="#9A6A1F" stroke-width="2"/>
+        <circle cx="52" cy="128" r="4.5" fill="#FFF1F6"/>
+        <circle cx="148" cy="128" r="4.5" fill="#FFF1F6"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <a class="brand" href="#beranda" aria-label="Kembali ke atas">
+      <svg class="brand-crown" aria-hidden="true"><use href="#crown"/></svg>
+      <span>Nama Kamu</span>
+    </a>
+
+    <nav id="menu" class="nav" aria-label="Navigasi utama">
+      <ul>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#bakat">Bakat</a></li>
+        <li><a href="#perjalanan">Perjalanan</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-tools">
+      <button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false">
+        <span aria-hidden="true">🌙</span> <span class="theme-label">Mode malam</span>
+      </button>
+      <button id="menuToggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Buka menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="konten">
+    <!-- BERANDA -->
+    <section id="beranda" class="hero">
+      <div class="hero-text">
+        <p class="hello">Selamat datang di istanaku ♥</p>
+        <h1>Aku Nama Kamu, seorang [profesi atau status kamu].</h1>
+        <p class="lead">Tulis satu atau dua kalimat tentang dirimu di sini: apa yang kamu kerjakan, apa yang kamu cintai, dan apa yang membuatmu bersemangat setiap hari.</p>
+        <div class="actions">
+          <a class="btn" href="#tentang">Kenali aku</a>
+          <a class="btn btn-ghost" href="#kontak">Kirim pesan</a>
+        </div>
+      </div>
+
+      <div class="hero-crown">
+        <button id="crownBtn" class="crown-btn" type="button" aria-label="Ketuk mahkota untuk menebar kilau">
+          <svg class="crown-svg" aria-hidden="true"><use href="#crown"/></svg>
+        </button>
+        <p id="crownHint" class="crown-hint" aria-live="polite">Ketuk mahkotanya, ada kejutan kecil.</p>
+      </div>
+    </section>
+
+    <!-- TENTANG -->
+    <section id="tentang" class="section">
+      <h2>Tentang aku</h2>
+      <div class="about">
+        <div class="avatar">
+          <svg class="avatar-fallback" viewBox="0 0 120 120" aria-hidden="true">
+            <circle cx="60" cy="46" r="22" fill="#F8BBD6"/>
+            <path d="M16 112 C16 84 38 72 60 72 C82 72 104 84 104 112 Z" fill="#F8BBD6"/>
+          </svg>
+          <img src="assets/foto.jpg" alt="Foto Nama Kamu" onerror="this.remove()">
+        </div>
+
+        <div class="about-body">
+          <p>Ceritakan siapa dirimu dengan gayamu sendiri. Kamu bisa mulai dari asalmu, apa yang sedang kamu pelajari atau kerjakan, lalu apa yang ingin kamu capai ke depan. Dua sampai tiga kalimat sudah cukup.</p>
+          <dl class="facts">
+            <div><dt>Asal</dt><dd>[Kota asalmu]</dd></div>
+            <div><dt>Kesibukan</dt><dd>[Sekolah, kuliah, atau pekerjaan]</dd></div>
+            <div><dt>Suka</dt><dd>[Hal yang kamu suka]</dd></div>
+            <div><dt>Impian</dt><dd>[Cita-citamu]</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- BAKAT -->
+    <section id="bakat" class="section">
+      <h2>Bakat dan hobi</h2>
+      <div class="talent">
+        <div>
+          <h3>Keahlian</h3>
+          <ul class="meters">
+            <li style="--level:90%">
+              <div class="meter-head"><span>Keahlian pertama</span><span>90%</span></div>
+              <div class="meter" role="img" aria-label="Keahlian pertama 90 persen"><span></span></div>
+            </li>
+            <li style="--level:80%">
+              <div class="meter-head"><span>Keahlian kedua</span><span>80%</span></div>
+              <div class="meter" role="img" aria-label="Keahlian kedua 80 persen"><span></span></div>
+            </li>
+            <li style="--level:70%">
+              <div class="meter-head"><span>Keahlian ketiga</span><span>70%</span></div>
+              <div class="meter" role="img" aria-label="Keahlian ketiga 70 persen"><span></span></div>
+            </li>
+            <li style="--level:60%">
+              <div class="meter-head"><span>Keahlian keempat</span><span>60%</span></div>
+              <div class="meter" role="img" aria-label="Keahlian keempat 60 persen"><span></span></div>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Hobi</h3>
+          <ul class="chips">
+            <li>Membaca</li>
+            <li>Menggambar</li>
+            <li>Musik</li>
+            <li>Memasak</li>
+            <li>Jalan-jalan</li>
+            <li>Fotografi</li>
+          </ul>
+          <p class="note">Ganti dengan hobimu sendiri, tambah atau kurangi sesukamu.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERJALANAN -->
+    <section id="perjalanan" class="section">
+      <h2>Perjalananku</h2>
+      <ol class="timeline">
+        <li>
+          <time>2018</time>
+          <h3>Langkah pertama</h3>
+          <p>Ceritakan awal perjalananmu: sekolah, komunitas, atau pengalaman pertama yang berkesan.</p>
+        </li>
+        <li>
+          <time>2021</time>
+          <h3>Mulai berkembang</h3>
+          <p>Tulis pencapaian, proyek, atau pelajaran penting yang kamu dapat di tahap ini.</p>
+        </li>
+        <li>
+          <time>2024</time>
+          <h3>Terus melangkah</h3>
+          <p>Ceritakan apa yang sedang kamu jalani sekarang dan apa yang kamu pelajari.</p>
+        </li>
+        <li>
+          <time>Sekarang</time>
+          <h3>Membangun istanaku</h3>
+          <p>Termasuk membuat website ini. Apa target terdekatmu?</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- KONTAK -->
+    <section id="kontak" class="section">
+      <h2>Hubungi aku</h2>
+      <div class="contact">
+        <form id="contactForm" novalidate>
+          <label for="nama">Namamu</label>
+          <input id="nama" name="nama" type="text" autocomplete="name" required>
+
+          <label for="email">Emailmu</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+
+          <label for="pesan">Pesan</label>
+          <textarea id="pesan" name="pesan" rows="5" required></textarea>
+
+          <button class="btn" type="submit">Kirim lewat email</button>
+          <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="contact-side">
+          <p>Atau temui aku di sini:</p>
+          <ul class="links">
+            <li><a href="https://instagram.com/usernamekamu" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://github.com/usernamekamu" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/usernamekamu" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Dibuat dengan ♥ oleh Nama Kamu &copy; <span id="year"></span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
